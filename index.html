@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+
+</head>
+<body>
+	
+	<h1 >попытки: <span class="point">3</span></h1>
+	<button class="button">Спрятать</button>
+	<div class="box">
+		<div class="card1" style="background-color:black;background-image: url(img/Antilop.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; top: 45%; left: 5%"></div>
+		<div class="card2" style="background-color:black;background-image: url(img/begemot.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 65%"></div>
+		<div class="card3" style="background-color:black;background-image: url(img/elephant.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 80%; top: 70%"></div>
+		<div class="col-4 card4" style="background-color:black;background-image: url(img/giena.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 38%; top: 65%"></div>
+		<div class="col-4 card5" style="background-color:black;background-image: url(img/jiraf.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 15%; top: 72%"></div>
+		<div class="col-4 card6" style="background-color:black;background-image: url(img/korova.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 15%; top: 12%"></div>
+		<div class="col-4 card7" style="background-color:black;background-image: url(img/lion.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 70%; top: 40% "></div>
+		<div class="col-4 card8" style="background-color:black;background-image: url(img/nosorog.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 42%; top: 6% "></div>
+		<div class="col-4 card9" style="background-color:black;background-image: url(img/zebra.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; left: 60%; top: 68% "></div>
+	</div>
+	<div class="vopros" style="display: block">
+		<h2 style="position: absolute; left: 42%; top: 45%">Где спрятан жираф?</h2>
+	</div> 			
+
+		
+<script>
+	let point = 3;
+	document.querySelector('.point').innerHTML = point;
+	
+	document.querySelector('.vopros').style.display = 'none';
+
+	document.querySelector('.button').onclick = function(){
+		document.querySelector('.vopros').style.display = 'block';
+		document.querySelector('.card1').style.backgroundImage = 'none';
+		document.querySelector('.card2').style.backgroundImage = 'none';
+		document.querySelector('.card3').style.backgroundImage = 'none';
+		document.querySelector('.card4').style.backgroundImage = 'none';
+		document.querySelector('.card5').style.backgroundImage = 'none';//жираф
+		document.querySelector('.card6').style.backgroundImage = 'none';
+		document.querySelector('.card7').style.backgroundImage = 'none';
+		document.querySelector('.card8').style.backgroundImage = 'none';
+		document.querySelector('.card9').style.backgroundImage = 'none';
+	}
+		//антилопа
+	document.querySelector('.card1').onclick = function(){
+		alert('Не то,что могло бы быть');
+		point = point - 1;
+		document.querySelector('.point').innerHTML = point;
+		document.querySelector('.card1').style.backgroundImage = 'url(img/Antilop.jpg)';
+		if(point == 0){
+			alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}
+	//бегемот
+	document.querySelector('.card2').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+			
+			document.querySelector('.card2').style.backgroundImage = 'url(img/begemot.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}
+		//слон
+	document.querySelector('.card3').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card3').style.backgroundImage = 'url(img/elephant.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}
+		//гиена
+	document.querySelector('.card4').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card4').style.backgroundImage = 'url(img/giena.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}	
+		//жираф
+	document.querySelector('.card5').onclick = function(){
+			alert('А это именно то,что надо!Молодец!');
+			point = point - 1; 
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card5').style.backgroundImage = 'url(img/jiraf.jpg)';
+			if(point == 1){
+				
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+			if(point == 0){
+				
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+			if(point == 2){
+				
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}	
+		//корова
+	document.querySelector('.card6').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card6').style.backgroundImage = 'url(img/korova.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}	
+		//лев
+	document.querySelector('.card7').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card7').style.backgroundImage = 'url(img/lion.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}	
+		//носорог
+	document.querySelector('.card8').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card8').style.backgroundImage = 'url(img/nosorog.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}	
+		//зебра
+	document.querySelector('.card9').onclick = function(){
+			alert('Не то,что могло бы быть');
+			point = point - 1;
+			document.querySelector('.point').innerHTML = point;
+		
+			document.querySelector('.card9').style.backgroundImage = 'url(img/zebra.jpg)';
+			if(point == 0){
+				alert('Фоталити');
+				document.querySelector('.vopros').style.display = 'none';
+				document.querySelector('.box').style.display = 'none';
+			}
+	}		
+
+	
+
+</script>	
+</body>
+</html>
